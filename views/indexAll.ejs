@@ -1,0 +1,82 @@
+<%- include head %>
+   <div class="container">
+        <div class="menuLogin row">
+        <form class="form-group row" action="/main" method="POST">
+        
+            <div class="text-light col-xs-2">
+                <label class="text-primary" for="user_name">Usuario</label>
+                <input class="bg-secondary text-light border-primary form-control" type="text" name="user_name" id="name">
+            </div>
+            <div class="text-light col-xs-2">
+                    <label class="text-primary" for="user_pass">Password</label>
+                    <input class="bg-secondary text-light border-primary form-control" type="password" name="user_pass" id="pass">
+            </div>
+            <div col-xs-2>
+            <button class="botonArriba btn btn-outline-primary" type="submit">Login</button>
+            <button class="botonArriba btn btn-outline-primary" type="submit">Sign Up</button>
+            </div>
+        </form>
+            <div class="botonAdmin col">
+                <form action="/admin">
+                    <button class="float-right btn btn-outline-primary" type="submit">ADMIN AREA</button>
+                </form>
+            </div>
+        </div>
+    </div>     
+       <!-------PELICULAS HABILITADAS------------------------------------------------------->
+       <hr class="style1">
+<div class="container">
+            <% if (shortfilms.length > 0) { %>
+        <div class="row"> 
+            <% for (let film of shortfilms) { %>
+        
+
+            <div class="col-lg-4 col-md-12 mb-4">  
+              <div class="modal fade" id="modal<%= film.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                <div class="modal-dialog modal-lg" role="document">  
+                  <div class="modal-content">
+                    
+                            
+                    <div class="modal-body mb-0 p-0 bg-dark">
+                      <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                        <iframe class="embed-responsive-item" src="<%= film.url %>"
+                          allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="modal-footer justify-content-left bg-dark">
+                        <span class="text-light col-2"><%= film.title %></span>
+                      <span class="text-light col-2"><%= film.year_release %></span>
+                      <textarea class="text-light col-6 bg-dark" rows="4" cols="auto">Sinopsis: <%= film.sinopsis %></textarea>
+                      <div justify-content-center>
+
+                        <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Cerrar</button>
+                      </div>
+                      
+                    </div>
+                
+                </div>
+                </div>
+              </div>
+              <div class="portaretrato">
+             <a data-toggle="modal" href="#modal<%= film.id %>"><img class="coverFilm img-fluid z-depth-1" src="<%= film.thumbnail %>" alt="video"
+                ></a>
+                <h6 class="text-light"><%= film.title %></h6>
+              </div>
+            </div>
+
+
+            
+            <% } %>
+        </div>
+
+
+            <% } else { %>
+                <h1>No films Found!</h1>
+            <% } %>
+        </div>
+     
+     
+
+
+</body>
+</html>

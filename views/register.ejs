@@ -1,0 +1,72 @@
+<%- include head %>
+    <% if (userflag === false){%>
+        <h2 class="row justify-content-center adminArea">Registro Usuario</h2>
+        <div class="menuLogin row justify-content-center">
+                
+            <form class="form-group row" action="/register/post" method="POST">
+                    <div class="row">
+                    <div class="text-light col-xs-2">
+                        <label for="user_name">Usuario</label>
+                        <input class="form-control" type="text" name="user_name" id="name">
+                    </div>
+                    <div class="text-light col-xs-2">
+                            <label for="user_pass">Password</label>
+                            <input class="form-control" type="password" name="user_pass" id="pass">
+                    </div>
+                    <div col-xs-2>
+                    <button class="botonArriba btn btn-outline-primary" type="submit">Login</button>
+                    
+                    </div>
+                </div>
+                </form>
+
+        </div>
+    <%}%>
+ 
+    <% if (userflag === true){%>
+        <div class="col-6 col-center">
+                <h2 class="row justify-content-center adminArea">Subir Video</h2>
+            <form class="subirPeliUser form-group" action="/register/upload/<%= participantData %>" method="POST">
+            <div class="container subirPeli">
+                <div class="text-light col-xs-2">
+                    <label for="title">Titulo</label>
+                    <input class="form-control" type="text" name="title" id="name">
+                </div>
+                <div class="text-light col-xs-2">
+                        <label for="url">Url del video</label>
+                        <input class="form-control" type="text" name="url" id="pass">
+                </div>
+                <div class="text-light col-xs-2">
+                        <label for="thumbnail">Url del thumbnail</label>
+                        <input class="form-control" type="text" name="thumbnail" id="pass">
+                </div>
+                <div class="text-light col-xs-2">
+                        <label for="year_release">Año de realizacion</label>
+                        <input class="form-control" type="text" name="year_release" id="name">
+                </div>
+                <div class="text-light col-xs-2">
+                        <label for="gen_id">Genero</label>
+                        <select class="custom-select" for="gen_id" name="gen_id" id="genero">
+                            <option value="1">Sci-Fi</option>
+                            <option value="2">Fantasy</option>
+                            <option value="3">Terror</option>
+                            <option value="4">Animacion</option>
+                        </select>
+                </div>
+                <div class="text-light col-xs-2">
+                        <label for="sinpsis">Sinopsis</label>
+                        <textarea class="form-control" rows="5" id="sinopsis" name="sinopsis"></textarea>
+                </div>
+                <div>
+                <button class="subirPeli float-right btn btn-outline-primary btn-rounded btn-md ml-4" type="submit">upload</button>
+                </div>
+            </div>
+            </form>
+            
+        </div>
+        <%}%>
+
+
+    
+</body>
+</html>

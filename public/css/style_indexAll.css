@@ -1,0 +1,115 @@
+.col-xs-2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.botonArriba{
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+/*
+hr.style1{
+	border-top: 1px solid #025fda;
+}
+*/
+.menuLogin{
+    margin: 0.5rem;
+}
+
+.botonAdmin{
+    
+    margin-top: 2rem;
+}
+
+.coverFilm{
+    height: 100%;
+    width: fit-content;
+}
+
+.portaretrato{
+    width: 100%;
+    height: 80%;
+}
+
+a.introSvg {
+    position: relative;
+    display: inline-block; 
+   }
+   a.introSvg:after {
+     content: ""; 
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left:0;
+   }
+
+   a.svg {
+    position: relative;
+    display: inline-block; 
+   }
+   a.svg:after {
+     content: ""; 
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left:0;
+   }
+
+
+.topLogo{
+    padding-top: 2rem;
+}
+
+.fondoIntro{
+    vertical-align: center;
+    height: 100%;
+}
+
+.topLine{
+    margin-top: 12rem;
+}
+
+.introLogo{
+    width: auto;
+    height: auto;
+}
+
+.subirPeli{
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 5rem;
+}
+
+.col-center{
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.adminArea{
+    margin: 0;
+}
+
+.tarjetas{
+    margin: 0.5rem;
+    padding: 0;
+}
+
+ul{
+    padding: 0;
+}
+
+.adminVideo{
+    height: 100%;
+    width: 100%;
+}
+
+li.sinopsis {
+    width: 100%;
+    height: 5rem;
+    overflow: auto;
+    font-size: 0.8rem;
+  }
+
